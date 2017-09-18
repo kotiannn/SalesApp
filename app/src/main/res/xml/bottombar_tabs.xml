@@ -1,0 +1,38 @@
+<tabs>
+
+    <tab
+        id="@+id/tab_invoice"
+
+        icon="@drawable/ic_description_black_24dp"
+        title="Invoice"
+        barColorWhenSelected="@color/colorPrimary" />
+
+    <tab
+        id="@+id/tab_trip"
+        icon="@drawable/ic_pin_drop_black_24dp"
+        barColorWhenSelected="@color/colorPrimary"
+
+        title="Trip" />
+
+    <tab
+        id="@+id/tab_customer"
+        icon="@drawable/ic_supervisor_account_black_24dp"
+        barColorWhenSelected="@color/colorPrimary"
+
+        title="Customer" />
+    <tab
+        id="@+id/tab_DieselFilling"
+
+
+        icon="@drawable/ic_ev_station_black_24dp"
+        title="DieselFill"
+        barColorWhenSelected="@color/colorPrimary" />
+
+    <!--barColorWhenSelected="@color/colorAccent"-->
+    <!--<tab-->
+        <!--id="@+id/tab_settings"-->
+        <!--icon="@drawable/ic_account_balance_wallet_black_24dp"-->
+
+        <!--title="Payments"-->
+        <!--barColorWhenSelected="@color/colorPrimary"/>-->
+</tabs>

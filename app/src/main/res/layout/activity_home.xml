@@ -1,0 +1,88 @@
+
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.mahathisol.salesapp.activities.HomeActivity">
+    <!--android:fitsSystemWindows="true"-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include  layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:id="@+id/myScrollingContent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+    <!-- Your loooooong scrolling content here. -->
+    <include layout="@layout/content_home" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="16dp"
+        android:visibility="visible"
+
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        app:borderWidth="0dp"
+        android:tint="@color/white"
+        app:fabSize="normal"
+
+        app:rippleColor="@color/colorAccent"/>
+
+    <com.github.fabtransitionactivity.SheetLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        app:ft_container_gravity="center"
+        app:ft_color="@color/colorAccent"
+        android:elevation="2dp"/>
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:bb_inActiveTabColor="@color/gray_dark"
+        android:foregroundTint="@color/white"
+        app:bb_activeTabColor="@color/white"
+        app:bb_titleTextAppearance="@style/Text"
+        app:bb_tabXmlResource="@xml/bottombar_tabs" />
+
+    <!--app:bb_behavior="shifting"-->
+    <!--<com.roughike.bottombar.BottomBar-->
+    <!--android:id="@+id/bottomBar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--app:bb_inActiveTabColor="@color/colorSecondaryText"-->
+    <!--app:bb_titleTextAppearance="@style/Text"-->
+    <!--app:bb_activeTabColor="@color/colorPrimaryText"-->
+    <!--app:bb_tabXmlResource="@xml/bottombar_tabs" />-->
+
+
+    <!--app:bb_titleTextAppearance="@style/Text"-->
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+

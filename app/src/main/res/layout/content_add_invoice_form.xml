@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_gravity="bottom"
+    android:fitsSystemWindows="true"
+
+    android:padding="10dp"
+    progressActivity:behavior_hideable="true"
+    progressActivity:behavior_peekHeight="60dp"
+    progressActivity:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:progressActivity="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        android:scrollbars="vertical">
+<com.vlonjatg.progressactivity.ProgressActivity
+
+    android:id="@+id/progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    progressActivity:emptyBackgroundColor="@color/white"
+    progressActivity:emptyContentTextColor="@color/colorPrimaryText"
+    progressActivity:emptyTitleTextColor="@color/colorPrimaryText"
+    progressActivity:errorBackgroundColor="@color/white"
+    progressActivity:errorButtonTextColor="@color/white"
+    progressActivity:errorContentTextColor="@color/colorPrimaryText"
+    progressActivity:errorTitleTextColor="@color/colorPrimaryText">
+
+
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+
+
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+
+        <!--progressActivity:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+       <!--&gt;-->
+        <!--android:layout_height="300dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:paddingBottom="16dp"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/idinvoiceno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:hint="Invoice No." />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/dateview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:focusable="false"
+                    android:hint="Date" />
+            </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Customer"
+                android:textColor="@color/divider"
+                android:textSize="12sp" />
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/idcustomer"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:spinnerMode="dropdown"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/customer_mobile"
+                style="style/TextAppearance.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingMultiplier="0.85"
+                android:maxLines="1"
+
+                android:paddingBottom="4dp"
+                android:text="9632451631"
+                android:textStyle="bold" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/customer_city"
+                style="style/TextAppearance.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingMultiplier="0.85"
+                android:maxLines="1"
+
+                android:paddingBottom="4dp"
+                android:text="Udupi"
+                android:textStyle="bold" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/customer_state"
+                style="style/TextAppearance.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingMultiplier="0.85"
+                android:maxLines="1"
+
+                android:paddingBottom="4dp"
+                android:text="Karnataka"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+
+                android:text="Next"
+
+                android:textColor="@color/white"
+
+                android:theme="@style/BorderlessButton" />
+
+
+        </LinearLayout>
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="horizontal">-->
+        <!--&lt;!&ndash; Signup Button &ndash;&gt;-->
+
+      <!---->
+
+
+        <!--&lt;!&ndash;style="?android:attr/buttonBarButtonStyle"&ndash;&gt;-->
+
+        <!--&lt;!&ndash;android:layout_marginTop="24dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="12dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginBottom="24dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="12dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="24dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginBottom="24dp"&ndash;&gt;-->
+    <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+</LinearLayout>
+
+</com.vlonjatg.progressactivity.ProgressActivity>
+
+    </ScrollView>
+
+</FrameLayout>

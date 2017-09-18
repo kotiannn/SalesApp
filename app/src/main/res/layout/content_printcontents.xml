@@ -1,0 +1,66 @@
+
+<com.vlonjatg.progressactivity.ProgressActivity
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    progressActivity:emptyBackgroundColor="@color/white"
+    progressActivity:emptyContentTextColor="@color/colorPrimaryText"
+    progressActivity:emptyTitleTextColor="@color/colorPrimaryText"
+    progressActivity:errorBackgroundColor="@color/white"
+    progressActivity:errorButtonTextColor="@color/white"
+    progressActivity:errorContentTextColor="@color/colorPrimaryText"
+    progressActivity:errorTitleTextColor="@color/colorPrimaryText"
+    progressActivity:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                 android:paddingTop="40dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+            <Button android:id="@+id/btn_connect_bluetooth_device"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_bluetooth_device_btn"/>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <Button android:id="@+id/btn_print"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/print_btn"/>
+
+                <Button android:id="@+id/btn_quit"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/quit_btn"/>
+            </LinearLayout>
+
+
+</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+        </com.vlonjatg.progressactivity.ProgressActivity>

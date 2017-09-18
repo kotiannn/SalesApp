@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mahathiegs.customer.activities.VendorActivity">
+
+    <item
+        android:id="@+id/upload"
+        android:orderInCategory="100"
+        android:title="upload"
+        android:icon="@drawable/ic_file_upload_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sync"
+        android:orderInCategory="100"
+        android:title="sync"
+        android:icon="@drawable/ic_sync_black_24dp"
+        app:showAsAction="always" />
+    <!--<item-->
+        <!--android:id="@+id/edit"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/edit"-->
+        <!--app:showAsAction="never" />-->
+    <!--<item-->
+        <!--android:id="@+id/change"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/change"-->
+        <!--app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+
+        app:showAsAction="never" />
+
+</menu>

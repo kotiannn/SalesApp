@@ -1,0 +1,52 @@
+
+<com.vlonjatg.progressactivity.ProgressActivity
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    progressActivity:emptyBackgroundColor="@color/white"
+    progressActivity:emptyContentTextColor="@color/colorPrimaryText"
+    progressActivity:emptyTitleTextColor="@color/colorPrimaryText"
+    progressActivity:errorBackgroundColor="@color/white"
+    progressActivity:errorButtonTextColor="@color/white"
+    progressActivity:errorContentTextColor="@color/colorPrimaryText"
+    progressActivity:errorTitleTextColor="@color/colorPrimaryText">
+
+    <!--progressActivity:loadingBackgroundColor="@color/white"-->
+<LinearLayout
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".ui.fragment.HotelSearchResultsFragment"
+    >
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/swipeLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--&gt;-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rv_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:paddingBottom="100dp" />
+</LinearLayout>
+
+</com.vlonjatg.progressactivity.ProgressActivity>
+
+

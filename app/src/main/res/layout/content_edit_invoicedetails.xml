@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_gravity="bottom"
+    android:fitsSystemWindows="true"
+
+    android:padding="10dp"
+    progressActivity:behavior_hideable="true"
+    progressActivity:behavior_peekHeight="60dp"
+    progressActivity:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:progressActivity="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        android:scrollbars="vertical">
+
+        <com.vlonjatg.progressactivity.ProgressActivity
+
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            progressActivity:emptyBackgroundColor="@color/white"
+            progressActivity:emptyContentTextColor="@color/colorPrimaryText"
+            progressActivity:emptyTitleTextColor="@color/colorPrimaryText"
+            progressActivity:errorBackgroundColor="@color/white"
+            progressActivity:errorButtonTextColor="@color/white"
+            progressActivity:errorContentTextColor="@color/colorPrimaryText"
+            progressActivity:errorTitleTextColor="@color/colorPrimaryText">
+
+
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--xmlns:tools="http://schemas.android.com/tools"-->
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/idinvoiceno"
+                            android:layout_weight="1"
+
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:text="" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_weight="1"
+                            android:id="@+id/idinvdate"
+                            android:text="" >
+                        </TextView>
+                    </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_weight="1"
+                        android:id="@+id/idcname"
+                        android:text="" >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_weight="1"
+                        android:id="@+id/idcmobile"
+                        android:text="" >
+                    </TextView>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_weight="1"
+                            android:id="@+id/idccity"
+                            android:text="" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_weight="1"
+                            android:id="@+id/idcgstinno"
+                            android:text="" >
+                        </TextView>
+                    </LinearLayout>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Product Company"
+                                android:textColor="@color/divider"
+                                android:textSize="12sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/idprComapny"
+                                style="@style/Widget.AppCompat.Spinner.Underlined"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:spinnerMode="dropdown" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Product Category"
+                                android:textColor="@color/divider"
+                                android:textSize="12sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/idprCAtegory"
+                                style="@style/Widget.AppCompat.Spinner.Underlined"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:spinnerMode="dropdown" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Product Type"
+                                android:textColor="@color/divider"
+                                android:textSize="12sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/idprType"
+                                style="@style/Widget.AppCompat.Spinner.Underlined"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:spinnerMode="dropdown" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Product Variant"
+                                android:textColor="@color/divider"
+                                android:textSize="12sp" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/idprVariant"
+                                style="@style/Widget.AppCompat.Spinner.Underlined"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp"
+                                android:spinnerMode="dropdown" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <EditText
+                                android:id="@+id/idquantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Quantity"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="129dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:id="@+id/idinstock"
+                                style="style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="50dp"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text="In Stock : -"
+                                android:textStyle="bold"
+
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <EditText
+                                android:id="@+id/idrate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="Rate "
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <EditText
+                                android:id="@+id/idhsncode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="HSN Code"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal" />
+
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <EditText
+                                android:id="@+id/idgstrate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="GST Rate"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp">
+
+                        <EditText
+                            android:id="@+id/idtaxableamt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="Taxable Amt (Rs.) : "
+
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <EditText
+                                android:id="@+id/idgstamt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:hint="GST Amount"
+
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp">
+
+                        <EditText
+                            android:id="@+id/idtotalamt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="Total Amt (Rs.) : "
+
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                <!--</android.support.v4.widget.NestedScrollView>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="40dp">
+                    <!-- Signup Button -->
+
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_save"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:text="Edit"
+
+                        android:textColor="@color/white"
+
+                        android:theme="@style/BorderlessButton" />
+
+                </LinearLayout>
+                <!--</LinearLayout>-->
+                <!--</android.support.v4.widget.NestedScrollView>-->
+            </LinearLayout>
+
+
+        </com.vlonjatg.progressactivity.ProgressActivity>
+
+    </ScrollView>
+
+</FrameLayout>

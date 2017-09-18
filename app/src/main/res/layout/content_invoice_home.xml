@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_gravity="bottom"
+    android:fitsSystemWindows="true"
+
+    android:padding="10dp"
+    progressActivity:behavior_hideable="true"
+    progressActivity:behavior_peekHeight="60dp"
+    progressActivity:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:progressActivity="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        android:scrollbars="vertical">
+
+        <com.vlonjatg.progressactivity.ProgressActivity
+
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            progressActivity:emptyBackgroundColor="@color/white"
+            progressActivity:emptyContentTextColor="@color/colorPrimaryText"
+            progressActivity:emptyTitleTextColor="@color/colorPrimaryText"
+            progressActivity:errorBackgroundColor="@color/white"
+            progressActivity:errorButtonTextColor="@color/white"
+            progressActivity:errorContentTextColor="@color/colorPrimaryText"
+            progressActivity:errorTitleTextColor="@color/colorPrimaryText">
+
+
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--xmlns:tools="http://schemas.android.com/tools"-->
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:weightSum="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="0.40"
+                    android:src="@drawable/ic_person_black_24dp"/>
+                <TextView
+                    android:id="@+id/loginname"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Name :" />
+</LinearLayout>
+                    <TextView
+                        android:id="@+id/tripstatus"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Trip Status :" />
+                <TextView
+                    android:id="@+id/tripnos"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Trip No :" />
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/addButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+
+
+                    android:layout_weight="0.04"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/addin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add" />
+
+                <ImageButton
+                    android:id="@+id/editButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.04"
+                    android:src="@drawable/edit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Edit" />
+
+
+                <ImageButton
+                    android:id="@+id/printButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+
+                    android:layout_weight="0.04"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/printertool" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Print" />
+            </LinearLayout>
+
+
+            <!--<FrameLayout-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--xmlns:tools="http://schemas.android.com/tools"-->
+            <!--android:id="@+id/contentContainer"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_above="@+id/bottomBar" />-->
+        </com.vlonjatg.progressactivity.ProgressActivity>
+
+    </ScrollView>
+
+</FrameLayout>
